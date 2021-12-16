@@ -1,0 +1,11 @@
+table {
+  @apply mx-auto w-full;
+}
+
+table tr, table tr div {
+  @apply truncate;
+}
+
+table tr:nth-child(even) {
+  /* @apply bg-gray-400; */
+}
