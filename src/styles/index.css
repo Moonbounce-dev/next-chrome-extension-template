@@ -161,5 +161,80 @@
   }
 }
 
+/* CONTENT */
+@layer base {
+  code {}
+
+  main {
+    @apply m-4 my-8 flex-col expanded flex-center;
+  }
+
+  header {
+    z-index: 9999;
+  }
+
+  footer {
+    @apply flex-center py-4 border-t-2 border-gray-200;
+  }
+
+  article {
+    @apply font-size-base serif mx-auto;
+    @apply max-w-screen-sm lg:max-w-screen-lg 2xl:max-w-screen-2xl 4xl:max-w-screen-4xl;
+  }
+}
+
+/* FORMS */
+@layer base {
+  button, .button {
+    text-decoration: none !important;
+    @apply cursor-pointer;
+    @apply pure-flex flex-center;
+    @apply px-8 py-4;
+    @apply rounded-lg border-2;
+    @apply bg-blue-500 text-white font-bold;
+  }
+
+  label {
+    @apply p-4 font-light;
+  }
+  
+  input {
+    @apply border-2 border-gray-300 rounded-lg;
+    @apply p-2;
+  }
+  
+  select {
+    @apply bg-white;
+    @apply border-2 border-gray-300 rounded-lg;
+    @apply p-2;
+  }
+  
+  /* Buttons already signal that the user can interact by touching. */
+  button, .button {
+    text-decoration: none !important;
+    @apply cursor-pointer;
+    @apply pure-flex flex-center;
+    @apply px-8 py-4;
+    @apply rounded-lg border-2;
+    @apply bg-blue-500 text-white font-bold;
+  }
+}
+
+/* TABLES */
+@layer base {
+  table {
+    @apply mx-auto w-full;
+  }
+  
+  table tr, table tr div {
+    @apply truncate;
+  }
+  
+  table tr:nth-child(even) {
+    /* @apply bg-gray-400; */
+  }
+}
+
 @import './elements/index.css';
 @import './viewport/index.css';
+@import './custom/index.css';

@@ -1,7 +1,18 @@
 {
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "next/core-web-vitals"
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "rules": {
+
+    /**
+     * For a Chrome extension, we are using `next export`, and cannot use
+     * next/image to optimize images.
+     */
+    "@next/next/no-img-element": "off",
 
     "indent": "off",
     "@typescript-eslint/indent": ["error", 2],

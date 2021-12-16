@@ -1,0 +1,16 @@
+.moon {
+  border: 8px solid #666;
+  border-radius: 50%;
+  box-shadow: inset 0px 16px #bbb;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, white 0%, rgb(102, 153, 255) 25%, rgb(255, 51, 102) 100%);
+  transition: background-position 1s ease-out, border-color 1s ease-out;
+
+  background-size: 1px 400px;
+}
+
+.moon:hover {
+  background-position: 600px;
+  border-color: white;
+}
