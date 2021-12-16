@@ -16,7 +16,6 @@
 /build
 /out
 extension.zip
-manifest.json
 
 # misc
 .DS_Store
