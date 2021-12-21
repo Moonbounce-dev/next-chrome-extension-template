@@ -1,6 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Chrome/Firefox Extension
+
+This builds the Next project as a Chrome and Firefox compatible browser
+extension.
+
+- Renames `/_next` in exports to `/assets` to prevent Chrome errors
+- Builds an extension to `extension.zip` in the root directory
 
 ## Getting Started
+
+### Exporting
+
+Use the `export` script to build and export the project as a browser extension
+at `extension.zip`:
+
+```
+yarn export
+```
+
+### Developing
+
+You should develop your application in the browser for the most straightforward
+development experience.
+
+#### In extension popup
+
+Use `yarn export` to update the output in `out/` and test in the extension popup
+as needed. Then, you can load this as a Chrome extension:
+
+  1. Go to [`chrome://extensions`](chrome://extensions)
+  2. Set **Developer Mode** to **ON** in the top-right corner
+  3. Click the **Load Unpacked** extension
+  4. View the popup by clicking the **Extensions** puzzle piece to the right of
+     the URL field and click the name of your new extension.
+  5. Optionally, pin the extension to your home bar for easier access.
+
+#### In browser
 
 First, run the development server:
 
