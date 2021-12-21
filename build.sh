@@ -14,8 +14,7 @@ cp manifest.json ./out;
 
 # Rename /_next/ dir to /assets/ to prevent Chrome errors.
 mv out/_next out/assets;
-sed -i 's,/_next/,/assets/,g' out/**.html;
-sed -i 's,/_next/,/assets/,g' $(find out/ -type f -name "**.js");
+sed -i 's,/_next/,/assets/,g' $(find out/ -type f -name "**.js" -o -name "**.html");
 
 # Build extension ZIP.
 cd out
