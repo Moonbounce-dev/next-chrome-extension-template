@@ -133,7 +133,7 @@
    * Flex container that fills parent.
    */
   .expanded {
-    @apply flex flex-1 items-stretch;
+    @apply flex flex-1 items-stretch w-full h-full;
   }
   /**
    * A pure-flex container will be display: flex.
@@ -166,7 +166,7 @@
   code {}
 
   main {
-    @apply m-4 my-8 flex-col expanded flex-center;
+    @apply p-4 py-8 flex-col expanded flex-center;
   }
 
   header {
@@ -232,6 +232,13 @@
   
   table tr:nth-child(even) {
     /* @apply bg-gray-400; */
+  }
+}
+
+/* Minimum viewport width for extension wrapper. */
+@layer base {
+  html, body {
+    min-width: 320px;
   }
 }
 

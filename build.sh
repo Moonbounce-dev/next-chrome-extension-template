@@ -17,5 +17,5 @@ mv out/_next out/assets;
 sed -i 's,/_next/,/assets/,g' $(find out/ -type f -name "**.js" -o -name "**.html");
 
 # Build extension ZIP.
-cd out
+cd out;
 zip -r -FS ../extension.zip *;
