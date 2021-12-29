@@ -133,7 +133,7 @@
    * Flex container that fills parent.
    */
   .expanded {
-    @apply flex flex-1 items-stretch w-full h-full;
+    @apply flex flex-1 items-stretch;
   }
   /**
    * A pure-flex container will be display: flex.
@@ -235,10 +235,16 @@
   }
 }
 
-/* Minimum viewport width for extension wrapper. */
+/* Extension wrapper customizations. */
 @layer base {
+  /* Minimum viewport width. */
   html, body {
     min-width: 320px;
+  }
+  /* Hide <body> scrollbar for an app-like feel. */
+  body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
   }
 }
 
