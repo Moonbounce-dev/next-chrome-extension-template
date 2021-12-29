@@ -11,7 +11,7 @@ extension.
 ### Exporting
 
 Use the `export` script to build and export the project as a browser extension
-at `extension.zip`:
+in `out/` and bundle into `extension.zip`:
 
 ```
 yarn export
