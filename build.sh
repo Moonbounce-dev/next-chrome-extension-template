@@ -16,6 +16,13 @@ cp manifest.json ./out;
 mv out/_next out/assets;
 sed -i 's,/_next/,/assets/,g' $(find out/ -type f -name "**.js" -o -name "**.html");
 
-# Build extension ZIP.
+# Ensure `zip` is available.
+if ! command -v zip &> /dev/null
+then
+    echo "zip command could not be found. Skipping."
+    exit
+fi
+
+# Build extension.zip.
 cd out;
 zip -r -FS ../extension.zip *;
